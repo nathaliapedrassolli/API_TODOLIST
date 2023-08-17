@@ -18,11 +18,14 @@ public class Todo {
     @Column(nullable = false)
     private StatusEnum status = StatusEnum.NOT_STARTED;
 
-    public Todo(Integer id, String title, String description, StatusEnum status) {
-        this.id = id;
+    public Todo(String title, String description, StatusEnum status) {
         this.title = title;
         this.description = description;
         this.status = status;
+    }
+
+    public Todo() {
+
     }
 
     public Integer getId() {
